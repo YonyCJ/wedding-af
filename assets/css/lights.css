@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+    height: 100vh;
+    background-color: #222;
+}
+
+.contenedor-explosion {
+    position: absolute;
+    pointer-events: none; /* No afecta la interacción del usuario */
+    opacity: 1;
+    transition: opacity 1s ease-out;
+}
+
+.circulo {
+    position: absolute;
+    width: 5px; /* Tamaño pequeño para simular partículas */
+    height: 5px;
+    background-color: white;
+    border-radius: 50%;
+    transform: scale(0.8);
+    transition: transform 2s ease-out, opacity 6s ease-out; /* Caída lenta y suave */
+    opacity: 1;
+}

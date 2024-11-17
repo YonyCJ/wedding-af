@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Passions+Conflict&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800&display=swap');
+
+.passions-conflict-regular {
+    font-family: "Passions Conflict", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 48px; /* Tamaño base */
+    color: #274066;
+}
+
+/* Agrega esta animación texto */
+@keyframes zoomInOut {
+    0% {
+        transform: scale(1); /* Tamaño original */
+    }
+    50% {
+        transform: scale(1.2); /* Aumenta el tamaño al 120% */
+    }
+    100% {
+        transform: scale(1); /* Regresa al tamaño original */
+    }
+}
+
+.passions-conflict-regular-pareja {
+    font-family: "Passions Conflict", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 90px; /* Tamaño base */
+    color: #274066;
+    animation: zoomInOut 2s ease-in-out infinite; /* Llama la animación */
+}
+
+
+.kanit-extrabold {
+    font-family: "Kanit", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 60px;
+    color: #274066;
+}
+
+.kanit-regular {
+    font-family: "Kanit", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+    color: #274066;
+  }
+
+.image-opacity-10 {
+    opacity: 0.4; /* 10% de opacidad */
+}
+
+video {
+    opacity: 0.5; /* Ajusta la opacidad según lo desees */
+}
+
+
+
+
+
+/* Media queries para ajustar la posición de la imagen en diferentes tamaños de pantalla */
+@media (max-width: 768px) {
+    .image-fade {
+        top: -300px; /* Ajusta este valor según la posición deseada en pantallas más pequeñas */
+    }
+    .passions-conflict-regular {
+        font-size: 48px; /* Tamaño para pantallas medianas */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Ajusta la posición de la imagen para pantallas pequeñas */
+    .image-fade {
+        top: -80px; /* Ajusta este valor según la posición deseada */
+    }
+
+    .image-fade-bottom {
+        bottom: -100px; /* Ajuste para pantallas pequeñas */
+    }
+
+    /* Tamaño de fuente para pantallas pequeñas */
+    .passions-conflict-regular {
+        font-size: 40px; /* Tamaño para pantallas pequeñas */
+    }
+
+    .kanit-extrabold {
+        font-size: 48px; /* Tamaño base */
+    }
+
+    .kanit-regular {
+        font-size: 25px; /* Tamaño base */
+    }
+
+    .passions-conflict-regular-pareja {
+        font-size: 80px; /* Tamaño base */
+    }
+
+    /* Ajuste de opacidad para el video */
+    video {
+        opacity: 0.5; /* Ajusta la opacidad según lo desees */
+    }
+
+
+}

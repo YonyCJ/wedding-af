@@ -1,0 +1,30 @@
+/* Eliminar barras de desplazamiento en todo el documento */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;  /* Asegura que el documento ocupe toda la altura de la pantalla */
+    overflow: hidden;  /* Elimina las barras de desplazamiento */
+}
+
+/* Estilos para el flipbook */
+#flipbook {
+    width: 100vw;           /* Ocupa todo el ancho de la ventana */
+    height: 100vh;          /* Ocupa toda la altura de la ventana */
+    margin: 0;
+    background-color: #f4f4f4;
+    overflow: hidden;       /* Evita el desplazamiento dentro del flipbook */
+    display: block;
+}
+
+/* Estilos de las páginas del flipbook */
+#flipbook .page {
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

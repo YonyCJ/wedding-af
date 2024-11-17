@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitacion de boda</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/stylePage6.css">
+    <link rel="stylesheet" href="../assets/css/lights.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+</head>
+<body class="flex items-center justify-center h-screen bg-gray-100 relative overflow-hidden" id="body">
+    <div id="fireworks-container" class="absolute inset-0 pointer-events-none z-10"></div>
+    
+    <video autoplay muted loop class="absolute top-0 left-0 w-full h-full object-cover z-0 opacity-10">
+        <source src="../assets/video/lavanda.mp4" type="video/mp4">
+        Tu navegador no soporta la etiqueta de video.
+    </video>  
+    <img src="../assets/img/mask.svg" alt="Imagen de la Boda" class="absolute top-0 w-full h-auto object-cover z-10 image-move">
+
+
+
+    <div class="text-center space-y-4 relative z-20 px-4">
+        <h1 class="kanit-bold">
+            Gracias por formar parte<br>
+            de este día tan especial para<br>
+            Nosotros.
+        </h1>
+
+        <h1 class="passions-conflict-regular-pareja">Te esperamos!</h1>
+
+        <h1 class="kanit-extrabold line-decorated">22/12/24</h1>
+
+        <!-- Imagen de vino -->
+        <img src="../assets/img/wine.svg" alt="Imagen de anillo" class="w-20 h-20 mx-auto z-0 image-opacity-10 mb-4">
+        
+    </div>
+
+    <div id="petals-container6"></div>
+
+    <script src="../assets/js/petalos6.js"></script>
+
+
+</body>
+</html>

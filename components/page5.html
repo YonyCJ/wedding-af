@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitacion de boda</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/stylePage5.css">
+    <link rel="stylesheet" href="../assets/css/imageFlower.css">
+    <link rel="stylesheet" href="../assets/css/lights.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+</head>
+<body class="flex items-center justify-center min-h-screen bg-gray-100 relative overflow-hidden" id="body">
+    <div id="fireworks-container" class="absolute inset-0 pointer-events-none z-10"></div>
+
+    <!-- Video de fondo -->
+    <video autoplay muted loop class="absolute top-0 left-0 w-full h-full object-cover z-0 opacity-10">
+        <source src="../assets/video/playa.mp4" type="video/mp4">
+        Tu navegador no soporta la etiqueta de video.
+    </video>    
+    
+    <!-- Elementos de la página -->
+    <img src="../assets/img/fondoflor.svg" class="img-position-top">
+    <div class="text-center space-y-4 relative z-20">
+
+        <h1 class="kanit-medium">
+            Tu presencia es muy<br>
+            importante para nosotros, por ello<br>
+            confírmanos tu asistencia<br>
+        </h1>
+        
+        <!-- Div de la imagen par.jpg -->
+    <div class="image-container">
+        <img src="../assets/img/par.jpg" alt="Imagen dentro del recuadro">
+        <!-- Contenedor para el texto -->
+        <div class="text-container">
+            <h1 class="kanit-medium">"El amor nunca se da por vencido, jamás pierde la fe, siempre tiene esperanzas y se mantiene firme en toda circunstancia."</h1>
+            <h1 class="kanit-extrabold">1 Corintios 13:7</h1>
+            <!-- Botón para confirmar asistencia -->
+            <a href="https://wa.me/972491362?text=Muchas%20gracias,%20ahí%20estaré" class="custom-button" target="_blank">
+                Confirma tu asistencia
+            </a>  
+        </div>
+    </div>
+        
+
+    </div>
+    <img src="../assets/img/fondoflor.svg" class="img-position-bot">
+
+
+    <div id="petals-container5"></div>
+    <script src="../assets/js/petalos5.js"></script>
+    
+
+
+</body>
+</html>

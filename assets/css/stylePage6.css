@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Passions+Conflict&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+.image-move {
+    position: absolute;
+    top: 0; /* Mantén la imagen en la parte superior */
+    width: 100%; /* Ajusta al ancho completo de la pantalla */
+    height: auto;
+    object-fit: cover; /* Para asegurarse de que la imagen cubra el área */
+
+    /* Animación de movimiento hacia arriba y hacia abajo */
+    animation: moveUpDown 3s ease-in-out infinite;
+}
+
+/* Animación para el movimiento hacia arriba y hacia abajo */
+@keyframes moveUpDown {
+    0%, 100% {
+        transform: translateY(0); /* La imagen comienza en su posición original */
+    }
+    50% {
+        transform: translateY(-10px); /* La imagen se mueve hacia arriba un poco */
+    }
+}
+
+
+.kanit-extrabold {
+    font-family: "Kanit", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 40px;
+    color: #274066;
+  }
+  .kanit-extrabold-december {
+    font-family: "Kanit", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 20px;
+    color: #274066;
+  }
+  .kanit-bold {
+    font-family: "Kanit", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20px;
+    color: #274066;
+  }
+ 
+.kanit-medium {
+    font-family: "Kanit", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 20px; /* Tamaño base */
+    color: #274066;
+  }
+
+  .passions-conflict-regular {
+    font-family: "Passions Conflict", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 48px; /* Tamaño base */
+    color: #274066;
+}
+
+/* Agrega esta animación */
+@keyframes zoomInOut {
+    0% {
+        transform: scale(1); /* Tamaño original */
+    }
+    50% {
+        transform: scale(1.2); /* Aumenta el tamaño al 120% */
+    }
+    100% {
+        transform: scale(1); /* Regresa al tamaño original */
+    }
+}
+
+.passions-conflict-regular-pareja {
+    font-family: "Passions Conflict", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 90px; /* Tamaño base */
+    color: #274066;
+    animation: zoomInOut 2s ease-in-out infinite; /* Llama la animación */
+}
+
+  .line-decorated {
+    position: relative;
+    display: inline-block;
+    padding: 10px 0; /* Espacio para las líneas */
+}
+
+.line-decorated::before,
+.line-decorated::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 2px; /* Grosor de la línea */
+    background-color: #333; /* Color de la línea */
+}
+
+.line-decorated::before {
+    top: 0; /* Posición de la línea superior */
+}
+
+.line-decorated::after {
+    bottom: 0; /* Posición de la línea inferior */
+}
+
+
+/*-------------------------------------ir a una siguiente hoja------------------------------------*/
+.page-turn-effect {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.2), transparent);
+    cursor: pointer;
+}
+
+.page-stack {
+    position: relative;
+    width: 50px;
+    height: 100px;
+}
+
+.page-layer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    background: rgba(0, 0, 0, 0.2);
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Luces parpadeantes*/
+.firework {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    animation: explode 1.5s ease-out forwards, fadeOut 1.5s ease-out forwards;
+}
+
+/* Animación de explosión */
+@keyframes explode {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+    100% {
+        transform: translate(var(--x), var(--y)) scale(0.8);
+    }
+}
+
+/* Animación de desvanecimiento */
+@keyframes fadeOut {
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .image-fade {
+        top: -100px; /* Ajusta la posición para pantallas medianas */
+        right: -150px;
+        width: 60%; /* Hazla un poco más grande */
+    }
+    .kanit-medium {
+        font-size: 10px; /* Tamaño base */
+      }
+}
+
+@media (max-width: 480px) {
+    .image-move {
+        top: 0; /* Mantén la imagen pegada a la parte superior */
+        width: 120%; /* Haz la imagen más grande (ajusta el porcentaje según lo necesites) */
+        object-fit: cover; /* Asegúrate de que la imagen cubra el espacio sin distorsionarse */
+    }
+
+    .passions-conflict-regular {
+        font-size: 24px; /* Tamaño para pantallas pequeñas */
+    }
+    .kanit-extrabold {
+        font-size: 20px; /* Tamaño ajustado */
+    }
+    .passions-conflict-regular-pareja {
+        font-size: 40px; /* Tamaño ajustado */
+    }
+    .kanit-medium {
+        font-size: 10px; /* Tamaño base */
+      }
+
+    video {
+        opacity: 0.5; /* Ajusta la opacidad según lo desees */
+    }
+}

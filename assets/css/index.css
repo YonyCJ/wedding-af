@@ -1,0 +1,30 @@
+/* styles.css */
+.perspective {
+    perspective: 1000px;
+}
+
+.backface-hidden {
+    backface-visibility: hidden;
+}
+
+.flap {
+    transform-origin: top;
+}
+
+.letter {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.envelope {
+    background: linear-gradient(145deg, #6ee7b7, #34d399);
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1), -4px -4px 8px rgba(255, 255, 255, 0.7);
+}
+
+.flap {
+    background: linear-gradient(145deg, #34d399, #6ee7b7);
+    box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.1), inset -4px -4px 8px rgba(255, 255, 255, 0.7);
+}
+
+.letter {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

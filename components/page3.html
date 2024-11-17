@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitacion de boda</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/stylePage3.css">
+    <link rel="stylesheet" href="../assets/css/imageFlower.css">
+    <link rel="stylesheet" href="../assets/css/lights.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+</head>
+<body class="flex items-center justify-center min-h-screen bg-gray-100 relative overflow-hidden" id="body">
+    <div id="fireworks-container" class="absolute inset-0 pointer-events-none z-10"></div>
+    <div id="petals-container3"></div>
+    <!-- Video de fondo -->
+    <video autoplay muted loop class="absolute top-0 left-0 w-full h-full object-cover z-0 opacity-20">
+        <source src="../assets/video/playa.mp4" type="video/mp4">
+        Tu navegador no soporta la etiqueta de video.
+    </video>    
+    
+    <!-- Elementos de la página -->
+    <img src="../assets/img/fondoflor.svg" class="img-position-top">
+    <div class="text-center space-y-4 relative z-20">
+
+        <h1 class="kanit-regular">
+            Con la bendición de Dios y de nuestros<br>
+            Padres, queremos que seas testigo<br>
+            de este amor.
+        </h1>
+
+        <h1 class="passions-conflict-regular-pareja">Padres del Novio</h1>
+
+        <h1 class="kanit-light">
+            Plácido Huanca Mamani<br>
+            Teresa Torres Sanchez
+        </h1>
+
+        <h1 class="passions-conflict-regular-pareja">Padres de la Novia</h1>
+        
+        <h1 class="kanit-light"> 
+            Juan Herrera Yañez<br>
+            Vilma Yucra Pariccahua</h1>
+
+    </div>
+    <img src="../assets/img/fondoflor.svg" class="img-position-bot">
+
+    
+    <script src="../assets/js/petalos3.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=Passions+Conflict&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+.kanit-extrabold {
+    font-family: "Kanit", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 40px;
+    color: #274066;
+  }
+  .kanit-extrabold-december {
+    font-family: "Kanit", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 20px;
+    color: #274066;
+  }
+  .kanit-bold {
+    font-family: "Kanit", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20px;
+    color: #274066;
+  }
+ 
+.kanit-medium {
+    font-family: "Kanit", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 20px; /* Tamaño base */
+    color: #274066;
+  }
+  .kanit-light {
+    font-family: "Kanit", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 20px;
+    color: #274066;
+  }
+
+  .passions-conflict-regular {
+    font-family: "Passions Conflict", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 48px; /* Tamaño base */
+    color: #274066;
+}
+/* Agrega esta animación */
+@keyframes zoomInOut {
+    0% {
+        transform: scale(1); /* Tamaño original */
+    }
+    50% {
+        transform: scale(1.2); /* Aumenta el tamaño al 120% */
+    }
+    100% {
+        transform: scale(1); /* Regresa al tamaño original */
+    }
+}
+
+.passions-conflict-regular-pareja {
+    font-family: "Passions Conflict", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 70px; /* Tamaño base */
+    color: #274066;
+    animation: zoomInOut 2s ease-in-out infinite; /* Llama la animación */
+}
+
+  .line-decorated {
+    position: relative;
+    display: inline-block;
+    padding: 10px 0; /* Espacio para las líneas */
+}
+
+.line-decorated::before,
+.line-decorated::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 2px; /* Grosor de la línea */
+    background-color: #333; /* Color de la línea */
+}
+
+.line-decorated::before {
+    top: 0; /* Posición de la línea superior */
+}
+
+.line-decorated::after {
+    bottom: 0; /* Posición de la línea inferior */
+}
+
+
+/*-------------------------------------ir a una siguiente hoja------------------------------------*/
+.page-turn-effect {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.2), transparent);
+    cursor: pointer;
+}
+
+.page-stack {
+    position: relative;
+    width: 50px;
+    height: 100px;
+}
+
+.page-layer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    background: rgba(0, 0, 0, 0.2);
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+/*CONTADOR*/
+.countdown-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.countdown {
+    display: flex;
+    gap: 30px; /* Aumenta este valor para más separación */
+    font-family: "Kanit", sans-serif;
+    color: #274066;
+}
+
+.time-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.time-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.time {
+    font-size: 40px;
+    font-weight: 700;
+    margin-right: 10px; /* Añade margen a la derecha del número */
+}
+
+.colon {
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0 20px; /* Ajusta este valor para centrar los dos puntos */
+}
+
+.label {
+    font-size: 20px;
+    font-weight: 300;
+    margin-top: 5px; /* Espacio entre el número y la etiqueta */
+    text-align: center;
+    margin-left: -50px;
+}
+.label-segundo {
+    font-size: 20px;
+    font-weight: 300;
+    margin-top: 5px; /* Espacio entre el número y la etiqueta */
+    text-align: center;
+    margin-left: -10px;
+}
+
+/* Estilos para el botón */
+.map-button {
+    display: inline-block;
+    margin-top: 10px; /* Espacio entre el h1 y el botón */
+    padding: 10px 20px; /* Espaciado interno del botón */
+    font-family: "Kanit", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #fff;
+    background-color: #274066; /* Color de fondo del botón */
+    border: none;
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.map-button:hover {
+    background-color: #1f334d; /* Color de fondo al pasar el ratón */
+}
+
+/* Estilos para la ventana flotante */
+.iframe-container {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* Asegura que ocupe toda la altura de la ventana */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    margin: 0; /* Asegura que no haya margen */
+    padding: 0; /* Asegura que no haya padding */
+}
+
+.iframe-content {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .image-fade {
+        top: -100px; /* Ajusta la posición para pantallas medianas */
+        right: -150px;
+        width: 60%; /* Hazla un poco más grande */
+    }
+}
+
+@media (max-width: 480px) {
+    .image-fade {
+        top: -50px; /* Posiciona más cerca de la parte superior */
+        right: -20px;
+        width: 70%; /* Hazla más grande en pantallas pequeñas */
+    }
+
+    .image-fade-bottom {
+        bottom: -80px; /* Ajusta la posición en pantallas pequeñas */
+        left: -20px;
+        width: 70%; /* Hazla más grande también */
+    }
+
+    .passions-conflict-regular {
+        font-size: 24px; /* Tamaño para pantallas pequeñas */
+    }
+
+    .kanit-extrabold {
+        font-size: 20px; /* Tamaño ajustado */
+    }
+
+    .kanit-light {
+        font-size: 18px; /* Tamaño base */
+    }
+
+    .passions-conflict-regular-pareja {
+        font-size: 60px; /* Tamaño base */
+    }
+
+    video {
+        opacity: 0.5; /* Ajusta la opacidad según lo desees */
+    }
+
+    /* Ajustes para el contador */
+    .countdown {
+        gap: 15px; /* Reduce el espacio entre las secciones de tiempo */
+    }
+
+    .time {
+        font-size: 30px; /* Tamaño ajustado para pantallas pequeñas */
+    }
+
+    .colon {
+        font-size: 30px; /* Tamaño ajustado para los dos puntos */
+        margin: 0 5px; /* Ajusta el margen para centrar los dos puntos */
+    }
+
+    .label {
+        font-size: 16px; /* Tamaño ajustado para las etiquetas */
+        margin-top: 3px; /* Ajusta el espacio entre el número y la etiqueta */
+    }
+
+    .label-segundo {
+        font-size: 16px; /* Tamaño ajustado para las etiquetas */
+        margin-top: 3px; /* Ajusta el espacio entre el número y la etiqueta */
+    }
+
+    /* Ajustes para el iframe */
+    .iframe-content {
+        width: 65%; /* Ajusta el ancho del iframe */
+        padding: 10px; /* Reduce el padding */
+        margin: 0 auto; /* Centra el contenedor horizontalmente */
+    }
+
+    .iframe-content iframe {
+        width: 100%; /* Asegura que el iframe ocupe todo el ancho disponible */
+        height: 300px; /* Ajusta la altura del iframe */
+    }
+}
+
+
+
+
+.petal {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-image: url('img/petalo.png'); /* Ruta a tu imagen de pétalo */
+    background-size: cover;
+    opacity: 0;
+    pointer-events: none;
+    animation: fall 5s linear infinite;
+}
+
+/* Luces parpadeantes*/
+.firework {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    animation: explode 1.5s ease-out forwards, fadeOut 1.5s ease-out forwards;
+}
+
+/* Animación de explosión */
+@keyframes explode {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+    100% {
+        transform: translate(var(--x), var(--y)) scale(0.8);
+    }
+}
+
+/* Animación de desvanecimiento */
+@keyframes fadeOut {
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100px) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+

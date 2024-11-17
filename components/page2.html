@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitacion de boda</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/stylePage2.css">
+    <link rel="stylesheet" href="../assets/css/imageFlower.css">
+    <link rel="stylesheet" href="../assets/css/lights.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+</head>
+<body class="flex items-center justify-center min-h-screen bg-gray-100 relative overflow-hidden" id="body">
+    <div id="fireworks-container" class="absolute inset-0 pointer-events-none z-10"></div>
+
+    <!-- Video de fondo -->
+    <video autoplay muted loop class="absolute top-0 left-0 w-full h-full object-cover z-0 opacity-20">
+        <source src="../assets/video/playa.mp4" type="video/mp4">
+        Tu navegador no soporta la etiqueta de video.
+    </video>    
+    
+    <!-- Elementos de la página -->
+    <img src="../assets/img/fondoflor.svg" class="img-position-top">
+    <div class="text-center space-y-4 relative z-20">
+        <h1 id="wedding-title" class="kanit-extrabold">NUESTRA BODA</h1>
+
+        <h1 class="kanit-medium">Nos encantaría celebrar este día tan especial en compañía de nuestra familia y amigos</h1>
+        
+        
+        <div class="flex items-center justify-center space-x-2 mt-4">
+            <h1 class="passions-conflict-regular-pareja">Francis</h1>
+            <img src="../assets/img/heart.png" alt="Imagen de corazones" class="w-20 h-20 object-contain">
+            <h1 class="passions-conflict-regular-pareja">Abel</h1>
+        </div>
+
+        <div class="flex justify-center mt-4 relative">
+            <img src="../assets/img/hearts.png" alt="Imagen de corazones" class="absolute inset-0 w-full h-full object-contain z-0 image-opacity-10">
+            <div class="w-64 h-64 rounded-full overflow-hidden border-4 border-gray-300 relative z-10">
+                <img src="../assets/img/par.jpg" alt="Imagen dentro del círculo" class="w-full h-full object-cover moving-image">
+            </div>
+        </div>
+
+        
+    </div>
+    <img src="../assets/img/fondoflor.svg" class="img-position-bot">
+
+   
+
+    <div id="petals-container2"></div>
+    
+
+<script src="../assets/js/petalos2.js"></script>
+
+    
+</body>
+</html>

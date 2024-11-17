@@ -1,0 +1,47 @@
+.img-position-top {
+    position: absolute;
+    top: -600px; /* Ajusta este valor según la posición deseada */
+    left: 0;
+    width: 100%;
+    height: auto; /* Deja que la altura se ajuste automáticamente */
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    mask-size: 100% 100%; /* Ajusta para cubrir toda la imagen */
+    -webkit-mask-size: 100% 100%;
+    object-fit: cover;
+    animation: sway 3s ease-in-out infinite; /* Añade la animación aquí */
+}
+
+.img-position-bot {
+    position: absolute;
+    bottom: -800px; /* Ubica la imagen en la parte inferior de la página */
+    left: 0;
+    width: 100%;
+    height: auto;
+    mask-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    mask-size: 100% 100%;
+    -webkit-mask-size: 100% 100%;
+    object-fit: cover;
+}
+
+@keyframes sway {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(3deg); }
+    100% { transform: rotate(0deg); }
+}
+
+
+
+
+@media (max-width: 480px) {
+    /* Ajusta la posición de la imagen para pantallas pequeñas */
+    .img-position-top {
+        top: -80px; /* Ajusta este valor según la posición deseada */
+    }
+
+    .img-position-bot {
+        bottom: -100px; /* Ajuste para pantallas pequeñas */
+    }
+    
+}

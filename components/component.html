@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#000000">
+    <title>Book</title>
+
+    <!-- Incluir el CSS básico para el flipbook -->
+    <link rel="stylesheet" href="../assets/css/component.css">
+
+    <!-- Incluir jQuery desde un CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+    <!-- Incluir Turn.js desde un CDN -->
+    <script src="../assets/js/turn.js"></script>
+</head>
+<body>
+    <!-- Agregar audio -->
+    <audio id="background-audio" autoplay loop>
+        <source src="../assets/audio/tedirequesi.mp3" type="audio/mp3">
+        Tu navegador no soporta la etiqueta de audio.
+    </audio>
+
+    <div id="flipbook">
+        <div class="page" id="page1">
+            <!-- El contenido de la página se cargará dinámicamente -->
+        </div>
+        <div class="page" id="page2">
+            <!-- El contenido de la página se cargará dinámicamente -->
+        </div>
+        <div class="page" id="page3">
+            <!-- El contenido de la página se cargará dinámicamente -->
+        </div>
+        <div class="page" id="page4">
+            <!-- El contenido de la página se cargará dinámicamente -->
+        </div>
+        <div class="page" id="page5">
+            <!-- El contenido de la página se cargará dinámicamente -->
+        </div>
+        <div class="page" id="page6">
+            <!-- El contenido de la página se cargará dinámicamente -->
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            // Inicializar Turn.js cuando el componente se haya cargado
+            $("#flipbook").turn({
+                width: $(window).width(),
+                height: $(window).height(),
+                autoCenter: true,
+                duration: 1000,
+                pages: 6,  // Asegúrate de que hay 6 páginas
+                display: 'single',
+                gradients: true,
+                elevation: 50,
+                turnCorners: 'bl',
+            });
+
+            // Función para cargar contenido de archivos HTML en las páginas
+            function loadPageContent(pageNumber) {
+                var pageId = '#page' + pageNumber;
+                var file = 'page' + pageNumber + '.html';
+
+                $.ajax({
+                    url: file,
+                    success: function(data) {
+                        $(pageId).html(data);  // Cargar el contenido del archivo en la página
+                        $('#flipbook').turn('update');  // Asegurarse de que Turn.js actualice la vista
+                    },
+                    error: function() {
+                        $(pageId).html('<h2>Error al cargar la página</h2>');
+                    }
+                });
+            }
+
+
+            // Cargar el contenido de las páginas 1 a 6
+            for (var i = 1; i <= 6; i++) {
+                loadPageContent(i);
+            }
+
+            // Actualizar el contenido de la página al voltear
+            $('#flipbook').on('turning', function(event, page, view) {
+                loadPageContent(page);  // Cargar dinámicamente el contenido para cada página al voltearla
+            });
+        });
+    </script>
+
+    <script>
+        // Intentar reproducir el audio después de una interacción del usuario
+        document.addEventListener('click', function() {
+            var audio = document.getElementById('background-audio');
+            if (audio.paused) {
+                audio.play();
+            }
+        });
+    </script>
+</body>
+</html>

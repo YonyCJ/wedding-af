@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Passions+Conflict&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+
+/* Estilos para los textos */
+.kanit-extrabold {
+    font-family: "Kanit", sans-serif;
+    font-weight: 800;
+    font-size: 40px;
+    color: #274066;
+}
+
+.kanit-extrabold-december {
+    font-family: "Kanit", sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    color: #274066;
+}
+
+.kanit-bold {
+    font-family: "Kanit", serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: #274066;
+}
+
+.kanit-medium {
+    font-family: "Kanit", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: #274066;
+}
+
+.kanit-medium-photo {
+    font-family: "Kanit", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: #274066;
+}
+
+.passions-conflict-regular {
+    font-family: "Passions Conflict", serif;
+    font-weight: 400;
+    font-size: 48px;
+    color: #274066;
+}
+
+.line-decorated {
+    position: relative;
+    display: inline-block;
+    padding: 10px 0;
+}
+
+.line-decorated::before,
+.line-decorated::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #333;
+}
+
+.line-decorated::before {
+    top: 0;
+}
+
+.line-decorated::after {
+    bottom: 0;
+}
+
+/* Estilos para el efecto de cambio de página */
+.page-turn-effect {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.2), transparent);
+    cursor: pointer;
+}
+
+.page-stack {
+    position: relative;
+    width: 50px;
+    height: 100px;
+}
+
+.page-layer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    background: rgba(0, 0, 0, 0.2);
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Estilos para el div con la imagen par.jpg */
+.image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    margin-top: 16px;
+    width: 100%;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.image-container .text-container {
+    margin-top: 16px;
+    text-align: center;
+}
+
+
+/* Estilos personalizados para el botón */
+.custom-button {
+    background-color: #274066; /* Color de fondo personalizado */
+    color: #ffffff; /* Color del texto */
+    padding: 12px 24px; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+    text-align: center; /* Alineación del texto */
+    display: inline-block; /* Para que el botón se comporte como un elemento en línea */
+    font-family: "Kanit", sans-serif; /* Fuente personalizada */
+    font-weight: 500; /* Peso de la fuente */
+    font-size: 16px; /* Tamaño de la fuente */
+    transition: background-color 0.3s ease; /* Transición suave para el cambio de color */
+}
+
+.custom-button:hover {
+    background-color: #1e3150; /* Color de fondo al pasar el ratón */
+}
+
+
+
+/* Luces parpadeantes*/
+.firework {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    animation: explode 1.5s ease-out forwards, fadeOut 1.5s ease-out forwards;
+}
+
+/* Animación de explosión */
+@keyframes explode {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+    100% {
+        transform: translate(var(--x), var(--y)) scale(0.8);
+    }
+}
+
+/* Animación de desvanecimiento */
+@keyframes fadeOut {
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+/* Ajustes para pantallas medianas */
+@media (max-width: 768px) {
+    .image-fade {
+        top: -100px;
+        right: -150px;
+        width: 60%;
+    }
+
+    .kanit-medium {
+        font-size: 10px;
+    }
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 480px) {
+    .image-fade {
+        top: -50px;
+        right: -20px;
+        width: 70%;
+    }
+
+    .image-fade-bottom {
+        bottom: -80px;
+        left: -20px;
+        width: 70%;
+    }
+
+    .passions-conflict-regular {
+        font-size: 24px;
+    }
+
+    .kanit-extrabold {
+        font-size: 20px;
+    }
+
+    .passions-conflict-regular-pareja {
+        font-size: 40px;
+    }
+
+    .kanit-medium-photo {
+        font-size: 10px;
+    }
+    .kanit-medium {
+        font-size: 15px;
+    }
+
+    video {
+        opacity: 0.5;
+    }
+
+    .image-container {
+        max-width: 300px; /* Ajusta el tamaño máximo del contenedor */
+        padding: 8px; /* Reduce el padding */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .image-container img {
+        width: 100%;
+        height: auto;
+    }
+
+    .image-container .text-container {
+        margin-top: 8px; /* Reduce el margen superior */
+    }
+}
+
+

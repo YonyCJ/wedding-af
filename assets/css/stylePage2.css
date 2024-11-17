@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Passions+Conflict&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800&display=swap');
+
+/* styleDetails.css */
+
+.moving-image {
+    animation: move 5s linear infinite;
+}
+
+@keyframes move {
+    0% { transform: scale(1) translateX(0); }
+    50% { transform: scale(1.05) translateX(10px); }
+    100% { transform: scale(1) translateX(0); }
+}
+
+.passions-conflict-regular {
+    font-family: "Passions Conflict", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 48px; /* Tamaño base */
+    color: #274066;
+}
+
+/* Agrega esta animación */
+@keyframes zoomInOut {
+    0% {
+        transform: scale(1); /* Tamaño original */
+    }
+    50% {
+        transform: scale(1.2); /* Aumenta el tamaño al 120% */
+    }
+    100% {
+        transform: scale(1); /* Regresa al tamaño original */
+    }
+}
+
+.passions-conflict-regular-pareja {
+    font-family: "Passions Conflict", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 90px; /* Tamaño base */
+    color: #274066;
+    animation: zoomInOut 2s ease-in-out infinite; /* Llama la animación */
+}
+
+.kanit-extrabold {
+    font-family: "Kanit", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 60px;
+    color: #274066;
+    display: inline-block; /* Asegura que el título tenga un ancho flexible */
+    text-align: center;
+    overflow: hidden; /* Oculta contenido fuera del área visible */
+}
+
+.letter {
+    opacity: 0;
+    display: inline-block;
+    transform: translateY(20px); /* Desplazamiento para efecto de animación */
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.letter.show {
+    opacity: 1;
+    transform: translateY(0); /* Regresa a la posición original */
+}
+
+
+
+.kanit-medium {
+    font-family: "Kanit", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 20px; /* Tamaño base */
+    color: #274066;
+  }
+
+.image-opacity-10 {
+    opacity: 0.4; /* 10% de opacidad */
+}
+
+video {
+    opacity: 0.5; /* Ajusta la opacidad según lo desees */
+}
+
+
+/* Luces parpadeantes*/
+.firework {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    animation: explode 1.5s ease-out forwards, fadeOut 1.5s ease-out forwards;
+}
+
+/* Animación de explosión */
+@keyframes explode {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+    100% {
+        transform: translate(var(--x), var(--y)) scale(0.8);
+    }
+}
+
+/* Animación de desvanecimiento */
+@keyframes fadeOut {
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+
+
+/* Media queries para ajustar la posición de la imagen en diferentes tamaños de pantalla */
+@media (max-width: 768px) {
+    .image-fade {
+        top: -300px; /* Ajusta este valor según la posición deseada en pantallas más pequeñas */
+    }
+    .passions-conflict-regular {
+        font-size: 48px; /* Tamaño para pantallas medianas */
+    }
+}
+
+@media (max-width: 480px) {
+    .image-fade {
+        top: -80px; /* Ajusta este valor según la posición deseada en pantallas muy pequeñas */
+    }
+    .image-fade-bottom {
+        bottom: -100px;
+    }
+    .passions-conflict-regular {
+        font-size: 40px; /* Tamaño para pantallas pequeñas */
+    }
+    .kanit-extrabold {
+        font-size: 48px; /* Tamaño base */
+    }
+    .passions-conflict-regular-pareja {
+        font-size: 80px; /* Tamaño base */
+    }
+    video {
+        opacity: 0.5; /* Ajusta la opacidad según lo desees */
+    }
+}
+
+@keyframes sway {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(3deg); }
+    100% { transform: rotate(0deg); }
+}

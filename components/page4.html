@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitacion de boda</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/stylePage4.css">
+    <link rel="stylesheet" href="../assets/css/imageFlower.css">
+    <link rel="stylesheet" href="../assets/css/lights.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+</head>
+<body class="flex items-center justify-center min-h-screen bg-gray-100 relative overflow-hidden" id="body">
+    <div id="fireworks-container" class="absolute inset-0 pointer-events-none z-10"></div>
+
+    <div id="petals-container4"></div>
+    <!-- Video de fondo -->
+    <video autoplay muted loop class="absolute top-0 left-0 w-full h-full object-cover z-0 opacity-20">
+        <source src="../assets/video/playa.mp4" type="video/mp4">
+        Tu navegador no soporta la etiqueta de video.
+    </video>
+
+    <!-- Elementos de la página -->
+    <img src="../assets/img/fondoflor.svg" class="img-position-top">
+
+    <div class="text-center space-y-4 relative z-20 px-4">
+       
+        
+        <!-- Imagen del anillo centrada -->
+        <img src="../assets/img/ring.svg" alt="Imagen de anillo" class="w-14 h-14 mx-auto z-0 image-opacity-10 mb-4">
+    
+        <!-- Contenedor flex para alinear verticalmente con separación -->
+        <div class="flex flex-col justify-center items-center space-y-2">
+            <div class="flex justify-center items-center space-x-4">
+                <h1 class="kanit-extrabold line-decorated">DOMINGO</h1>
+                <h1 class="kanit-extrabold">22</h1>
+                <h1 class="kanit-extrabold line-decorated">11:00 A.M.</h1>
+            </div>
+            <h1 class="kanit-extrabold">DICIEMBRE</h1>
+        </div>
+
+        <h1 class="passions-conflict-regular-pareja">Recepción</h1>
+
+
+        <!-- Imagen de vino -->
+        <img src="../assets/img/wine.svg" alt="Imagen de anillo" class="w-14 h-14 mx-auto z-0 image-opacity-10 mb-4">
+        <h1 class="kanit-bold">Local del evento</h1>
+        <h1 class="kanit-light">
+            Calle Mariano Santos "Local Villa Perico" - Oropesa - Cusco
+        </h1>
+        <button class="map-button" onclick="showIframe()">Ver mapa</button>
+        <!-- Ventana flotante con iframe -->
+        <div id="iframe-container" class="iframe-container">
+            <div class="iframe-content">
+                <span class="close-button" onclick="closeIframe()">&times;</span>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019019708618!2d-71.9405!3d-13.5171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x916dd5d6b5b5b5b5%3A0x5b5b5b5b5b5b5b5b!2sCalle%20Mariano%20Santos%2C%20Oropesa%2C%20Cusco!5e0!3m2!1sen!2spe!4v1633024800000!5m2!1sen!2spe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+        
+
+
+        <h1 class="passions-conflict-regular-pareja">Faltan</h1>
+
+        <div class="countdown-container">
+            <div class="countdown">
+                <div class="time-section">
+                    <div class="time-wrapper">
+                        <span class="time" id="days"></span>
+                        <span class="colon">:</span>
+                    </div>
+                    <span class="label">Días</span>
+                </div>
+                <div class="time-section">
+                    <div class="time-wrapper">
+                        <span class="time" id="hours"></span>
+                        <span class="colon">:</span>
+                    </div>
+                    <span class="label">Horas</span>
+                </div>
+                <div class="time-section">
+                    <div class="time-wrapper">
+                        <span class="time" id="minutes"></span>
+                        <span class="colon">:</span>
+                    </div>
+                    <span class="label">Minutos</span>
+                </div>
+                <div class="time-section">
+                    <div class="time-wrapper">
+                        <span class="time" id="seconds"></span>
+                    </div>
+                    <span class="label-segundo">Segundos</span>
+                </div>
+            </div>
+        </div>
+        
+        
+
+    </div>
+
+
+    <img src="../assets/img/fondoflor.svg" alt="flor bottom" class="img-position-bot">
+
+    
+
+   
+
+
+    <script>
+        function updateCountdown() {
+            const targetDate = new Date("December 22, 2024 11:00:00 GMT-5").getTime();
+            const now = new Date().getTime();
+            const difference = targetDate - now;
+    
+            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+    
+            document.getElementById("days").innerText = days;
+            document.getElementById("hours").innerText = hours;
+            document.getElementById("minutes").innerText = minutes;
+            document.getElementById("seconds").innerText = seconds;
+        }
+    
+        setInterval(updateCountdown, 1000);
+    </script>
+    
+
+
+    <script>
+        function showIframe() {
+            document.getElementById('iframe-container').style.display = 'flex';
+        }
+    
+        function closeIframe() {
+            document.getElementById('iframe-container').style.display = 'none';
+        }
+    </script>
+ <script src="../assets/js/petalos4.js"></script>
+</body>
+</html>

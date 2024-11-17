@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitacion de boda</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/stylePage1.css">
+    <link rel="stylesheet" href="../assets/css/imageFlower.css">
+    <link rel="stylesheet" href="../assets/css/lights.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+</head>
+<body class="flex items-center justify-center min-h-screen bg-gray-100 relative overflow-hidden" id="body">
+    <div id="fireworks-container"></div>
+    
+
+    <!-- Video de fondo -->
+    <video autoplay muted loop class="absolute top-0 left-0 w-full h-full object-cover z-0 opacity-20">
+        <source src="../assets/video/playa.mp4" type="video/mp4">
+        Tu navegador no soporta la etiqueta de video.
+    </video>    
+    
+    <!-- Elementos de la página -->
+    <img src="../assets/img/fondoflor.svg" class="img-position-top">
+
+
+    <div class="text-center space-y-4 relative z-20">
+        <h1 class="kanit-regular">
+            Después de conocernos<br>
+            y vivir la experiencia más<br>
+            linda que te regala Dios...
+        </h1>
+        <img src="../assets/img/rosa.png" class="rosa-image w-20 h-20 mx-auto z-0 image-opacity-10 mb-4">
+        <h1 class="kanit-regular"> 
+            Estamos listos para ser<br>
+            más felices y caminar siempre<br>
+            juntos de la mano. Por eso<br>
+            queremos contarte que... 
+        </h1>
+        <h1 class="passions-conflict-regular-pareja">¡Nos Casamos!</h1>
+    </div>
+    <img src="../assets/img/fondoflor.svg" class="img-position-bot">
+
+    <div id="petals-container"></div>
+
+<script src="../assets/js/petalos1.js"></script>
+
+
+<!-- Contenedor para los fuegos artificiales -->
+<script src="../assets/js/luces1.js"></script>
+
+</body>
+</html>
