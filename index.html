@@ -60,12 +60,12 @@
                 // Cargar el archivo CSS para component.html antes de redirigir
                 var link = document.createElement('link');
                 link.rel = 'stylesheet';
-                link.href = '../assets/css/component.css';  // Ruta del CSS de component.html
+                link.href = './assets/css/component.css';  // Ruta del CSS de component.html
                 document.head.appendChild(link);
 
                 // Asegurarse de que el CSS se haya cargado antes de redirigir
                 link.onload = function() {
-                    window.location.href = '../components/component.html';  // Redirigir una vez que los estilos están listos
+                    window.location.href = './components/component.html';  // Redirigir una vez que los estilos están listos
                 };
             }});
         });
